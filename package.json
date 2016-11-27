@@ -1,0 +1,40 @@
+{
+  "name": "admiral",
+  "description": "Modular test runner for javascript land.",
+  "author": "Jarid Margolin <jaridmargolin@gmail.com>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/admiraljs/admiral",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admiraljs/admiral"
+  },
+  "bugs": {
+    "url": "https://github.com/admiraljs/admiral/issues"
+  },
+  "scripts": {
+    "test": "mocha",
+    "inspect-test": "inspect _mocha --no-timeouts",
+    "coverage": "nyc --reporter=lcov --reporter=text npm test",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "main": "lib/index.js",
+  "bin": {
+    "admiral": "lib/index.js"
+  },
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "glob": "^7.1.0",
+    "lodash": "^4.15.0",
+    "pawn": "0.0.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "fs-extra": "^1.0.0",
+    "inspect-process": "^0.3.0",
+    "mocha": "^3.1.2",
+    "nyc": "^10.0.0",
+    "sinon": "^1.17.6"
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "name": "fixture",
+  "version": "0.0.1",
+  "dependencies": {
+    "admiral-integration-plugin": "^0.0.1",
+    "admiral-target": "^0.0.1",
+    "admiral-unit-plugin": "^0.0.1"
+  }
+}
