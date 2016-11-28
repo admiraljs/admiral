@@ -1,0 +1,35 @@
+{
+  "name": "admiral-target-local",
+  "description": "Admiral plugin to run tests via local selenium.",
+  "author": "Jarid Margolin <jaridmargolin@gmail.com>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/admiraljs/admiral-target-local",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admiraljs/admiral-target-local"
+  },
+  "bugs": {
+    "url": "https://github.com/admiraljs/admiral-target-local/issues"
+  },
+  "scripts": {
+    "test": "mocha",
+    "inspect-test": "inspect _mocha --no-timeouts",
+    "coverage": "nyc --reporter=lcov --reporter=text npm test",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "bluebird": "^3.4.6",
+    "chromedriver": "^2.24.1",
+    "lodash": "^4.16.4",
+    "selenium-webdriver": "^3.0.0-beta-3"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "inspect-process": "^0.3.0",
+    "mocha": "^3.1.2",
+    "nyc": "^10.0.0"
+  }
+}
