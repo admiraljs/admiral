@@ -48,34 +48,20 @@ describe('admiral', function () {
   });
 
   it('Should run both unit and integration tests.', function () {
-    const unitSpy = sinon.spy(unitPlugin.prototype, 'run');
-    const integrationSpy = sinon.spy(integrationPlugin.prototype, 'run');
-
-    return admiral.execute().then(() => {
-      assert.isTrue(unitSpy.calledOnce);
-      assert.isTrue(integrationSpy.calledOnce);
-
-      unitSpy.restore();
-      integrationSpy.restore();
+    return admiral.execute().then((result) => {
+      assert.deepEqual(result, ['unit', 'integration']);
     });
   });
 
   it('Should only run if tests are defined.', function () {
-    const unitSpy = sinon.spy(unitPlugin.prototype, 'run');
-    const integrationSpy = sinon.spy(integrationPlugin.prototype, 'run');
-
     fs.copySync('test/unit', 'test/_unit');
     fs.removeSync('test/unit');
 
-    return admiral.execute().then(() => {
-      assert.isFalse(unitSpy.calledOnce);
-      assert.isTrue(integrationSpy.calledOnce);
+    return admiral.execute().then((result) => {
+      assert.deepEqual(result, ['integration']);
 
       fs.copySync('test/_unit', 'test/unit');
       fs.removeSync('test/_unit');
-
-      unitSpy.restore();
-      integrationSpy.restore();
     });
   });
 
@@ -142,21 +128,14 @@ describe('admiral', function () {
   });
 
   it('Should infer test runners if not explicitly specified.', function () {
-    const unitSpy = sinon.spy(unitPlugin.prototype, 'run');
-    const integrationSpy = sinon.spy(integrationPlugin.prototype, 'run');
-
     fs.copySync('admiralfile.js', '_admiralfile.js');
     fs.removeSync('admiralfile.js');
 
-    return admiral.execute().then(() => {
-      assert.isTrue(unitSpy.calledOnce);
-      assert.isTrue(integrationSpy.calledOnce);
+    return admiral.execute().then((result) => {
+      assert.deepEqual(result, ['unit', 'integration']);
 
       fs.copySync('_admiralfile.js', 'admiralfile.js');
       fs.removeSync('_admiralfile.js');
-
-      unitSpy.restore();
-      integrationSpy.restore();
     });
   });
 
