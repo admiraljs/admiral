@@ -1,0 +1,41 @@
+{
+  "name": "admiral-unit-mocha",
+  "description": "Admiral plugin to run unit tests with mocha.",
+  "author": "Jarid Margolin <jaridmargolin@gmail.com>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/admiraljs/admiral-unit-mocha",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admiraljs/admiral-unit-mocha"
+  },
+  "bugs": {
+    "url": "https://github.com/admiraljs/admiral-unit-mocha/issues"
+  },
+  "scripts": {
+    "test": "mocha test/index.js",
+    "inspect-test": "inspect _mocha --no-timeouts",
+    "coverage": "nyc --reporter=lcov --reporter=text npm test",
+    "coveralls": "cat ./coverage/lcov.info | coveralls"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "fs-extra": "^1.0.0",
+    "lodash": "^4.17.2",
+    "mkdirp": "^0.5.1",
+    "mocha": "^3.2.0",
+    "mustache": "^2.3.0",
+    "node-static": "^0.7.9",
+    "node-uuid": "^1.4.7",
+    "portfinder": "^1.0.10",
+    "rimraf": "^2.5.4"
+  },
+  "devDependencies": {
+    "admiral-target-local": "0.0.1",
+    "chai": "^3.5.0",
+    "coveralls": "^2.11.15",
+    "inspect-process": "^0.3.0",
+    "mocha": "^3.1.2",
+    "nyc": "^10.0.0"
+  }
+}
