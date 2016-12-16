@@ -1,9 +1,18 @@
-# admiral-integration-mocha
-
-[![Build Status](https://travis-ci.org/admiraljs/admiral-integration-mocha.svg?branch=master)](https://travis-ci.org/admiraljs/admiral-integration-mocha) [![Coverage Status](https://coveralls.io/repos/github/admiraljs/admiral-integration-mocha/badge.svg?branch=master)](https://coveralls.io/github/admiraljs/admiral-integration-mocha?branch=master) [![NPM admiral-integration-mocha package](https://img.shields.io/npm/v/admiral-integration-mocha.svg)](https://npmjs.org/package/admiral-integration-mocha)
-
-> Admiral plugin to run integration tests with mocha.
-
+<h1 align="center">admiral-integration-mocha</h1>
+<div align="center">
+  <p>Admiral plugin to run integration tests with mocha.</p>
+  <div>
+  <a href="https://travis-ci.org/admiraljs/admiral-integration-mocha"><img src="https://travis-ci.org/admiraljs/admiral-integration-mocha.svg?branch=master" alt="Build Status"></a>
+  <a href="https://coveralls.io/github/admiraljs/admiral-integration-mocha?branch=master"><img src="https://coveralls.io/repos/github/admiraljs/admiral-integration-mocha/badge.svg?branch=master" alt="Coverage Status"></a>
+  <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  </div>
+  <div>
+  <a href="https://npmjs.org/package/admiral-integration-mocha"><img src="https://img.shields.io/npm/v/admiral-integration-mocha.svg" alt="NPM admiral-integration-mocha package"></a>
+  <a href="https://david-dm.org/admiraljs/admiral-integration-mocha"><img src="https://david-dm.org/admiraljs/admiral-integration-mocha.svg" alt="Dependency Status"></a>
+  <a href="https://david-dm.org/admiraljs/admiral-integration-mocha#info=devDependencies"><img src="https://david-dm.org/admiraljs/admiral-integration-mocha/dev-status.svg" alt="devDependency Status"></a>
+  </div>
+</div>
+<br>
 
 ## License
 
