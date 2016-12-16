@@ -1,9 +1,18 @@
-# admiral
-
-[![Build Status](https://travis-ci.org/admiraljs/admiral.svg?branch=master)](https://travis-ci.org/admiraljs/admiral) [![Coverage Status](https://coveralls.io/repos/github/admiraljs/admiral/badge.svg?branch=master)](https://coveralls.io/github/admiraljs/admiral?branch=master) [![NPM admiral package](https://img.shields.io/npm/v/admiral.svg)](https://npmjs.org/package/admiral)
-
-> Modular test runner for javascript land.
-
+<h1 align="center">admiral</h1>
+<div align="center">
+  <p>Modular test runner for javascript land.</p>
+  <div>
+  <a href="https://travis-ci.org/admiraljs/admiral"><img src="https://travis-ci.org/admiraljs/admiral.svg?branch=master" alt="Build Status"></a>
+  <a href="https://coveralls.io/github/admiraljs/admiral?branch=master"><img src="https://coveralls.io/repos/github/admiraljs/admiral/badge.svg?branch=master" alt="Coverage Status"></a>
+  <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  </div>
+  <div>
+  <a href="https://npmjs.org/package/admiral"><img src="https://img.shields.io/npm/v/admiral.svg" alt="NPM admiral package"></a>
+  <a href="https://david-dm.org/admiraljs/admiral"><img src="https://david-dm.org/admiraljs/admiral.svg" alt="Dependency Status"></a>
+  <a href="https://david-dm.org/admiraljs/admiral#info=devDependencies"><img src="https://david-dm.org/admiraljs/admiral/dev-status.svg" alt="devDependency Status"></a>
+  </div>
+</div>
+<br>
 
 ## License
 
