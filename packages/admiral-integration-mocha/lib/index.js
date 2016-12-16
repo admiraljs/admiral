@@ -1,25 +1,24 @@
-'use strict';
+'use strict'
 
 /* -----------------------------------------------------------------------------
  * dependencies
- * ---------------------------------------------------------------------------*/
+ * -------------------------------------------------------------------------- */
 
 // core
-const path = require('path');
+const path = require('path')
 
 // 3rd party
-const _ = require('lodash');
-const Promise = require('bluebird');
-const Mocha = require('mocha');
-
+const _ = require('lodash')
+const Promise = require('bluebird')
+const Mocha = require('mocha')
 
 /* -----------------------------------------------------------------------------
  * IntegrationMochaRunner
- * ---------------------------------------------------------------------------*/
+ * -------------------------------------------------------------------------- */
 
 const Runner = module.exports = function (options) {
-  this.options = options;
-};
+  this.options = options
+}
 
 Runner.options = {
   'integrationMocha.target': {
@@ -27,36 +26,36 @@ Runner.options = {
     description: 'Key representing the target the tests will execute in. By default `targetLocal` is the only existing target. Additional targets may be loaded using plugins.',
     default: 'targetLocal.chrome'
   }
-};
+}
 
 Runner.prototype.run = function (test, browsers) {
-  return Promise.mapSeries(browsers, (browser) => this.runTest(test, browser));
-};
+  return Promise.mapSeries(browsers, (browser) => this.runTest(test, browser))
+}
 
 Runner.prototype.runTest = function (test, browser) {
   const attachDriver = function () {
     // ensure we have root suite
-    let suite = this.suite;
-    while(suite.parent) { suite = suite.parent; }
+    let suite = this.suite
+    while (suite.parent) { suite = suite.parent }
 
-    Object.defineProperty(suite.ctx, "driver", {
-      get: function() { return browser.driver; }
-    });
-  };
+    Object.defineProperty(suite.ctx, 'driver', {
+      get: function () { return browser.driver }
+    })
+  }
 
   return new Promise(function (resolve, reject) {
-    const mocha = new Mocha().delay();
+    const mocha = new Mocha().delay()
 
     _.each(test.files, (file) => {
-      delete require.cache[path.resolve(file)];
-      mocha.addFile(file);
-    });
+      delete require.cache[path.resolve(file)]
+      mocha.addFile(file)
+    })
 
     const runner = mocha.run((failures) => {
-      return browser.quit().then(resolve(failures));
-    });
+      return browser.quit().then(resolve(failures))
+    })
 
-    runner.on('start', attachDriver);
-    runner.suite.run();
-  });
-};
+    runner.on('start', attachDriver)
+    runner.suite.run()
+  })
+}
