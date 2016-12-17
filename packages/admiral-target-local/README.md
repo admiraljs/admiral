@@ -1,9 +1,18 @@
-# admiral-target-local
-
-[![Build Status](https://travis-ci.org/admiraljs/admiral-target-local.svg?branch=master)](https://travis-ci.org/admiraljs/admiral-target-local) [![Coverage Status](https://coveralls.io/repos/github/admiraljs/admiral-target-local/badge.svg?branch=master)](https://coveralls.io/github/admiraljs/admiral-target-local?branch=master) [![NPM admiral-target-local package](https://img.shields.io/npm/v/admiral-target-local.svg)](https://npmjs.org/package/admiral-target-local)
-
-> Admiral plugin to run tests via local selenium.
-
+<h1 align="center">admiral-target-local</h1>
+<div align="center">
+  <p>Admiral plugin to run tests via local selenium.</p>
+  <div>
+  <a href="https://travis-ci.org/admiraljs/admiral-target-local"><img src="https://travis-ci.org/admiraljs/admiral-target-local.svg?branch=master" alt="Build Status"></a>
+  <a href="https://coveralls.io/github/admiraljs/admiral-target-local?branch=master"><img src="https://coveralls.io/repos/github/admiraljs/admiral-target-local/badge.svg?branch=master" alt="Coverage Status"></a>
+  <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  </div>
+  <div>
+  <a href="https://npmjs.org/package/admiral-target-local"><img src="https://img.shields.io/npm/v/admiral-target-local.svg" alt="NPM admiral-target-local package"></a>
+  <a href="https://david-dm.org/admiraljs/admiral-target-local"><img src="https://david-dm.org/admiraljs/admiral-target-local.svg" alt="Dependency Status"></a>
+  <a href="https://david-dm.org/admiraljs/admiral-target-local#info=devDependencies"><img src="https://david-dm.org/admiraljs/admiral-target-local/dev-status.svg" alt="devDependency Status"></a>
+  </div>
+</div>
+<br>
 
 ## License
 
