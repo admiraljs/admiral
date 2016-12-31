@@ -9,6 +9,7 @@
   <body>
     <div id="mocha"></div>
 
+    <script src="/stacktrace/stacktrace-with-promises-and-json-polyfills.js"></script>
     <script src="/mocha/lib/mocha.js"></script>
     <script>mocha.setup({{{config}}});</script>
     {{#tests}}
@@ -16,34 +17,75 @@
     {{/tests}}
     <script>
       (function () {
+        // allows us to make sure all listeners are properly added before run
+        mocha.delay()
+
         var runner = mocha.run();
-        var failed = [];
+        var events = []
+        var stacks = []
 
-        var _flattenTitles = function (test) {
-          var titles = [];
+        runner.on('start', function () {
+          events.push({ name: 'start', args: [] })
+        })
 
-          while (test.parent.title) {
-            titles.unshift(test.parent.title);
-            test = test.parent;
-          }
+        runner.on('suite', function (Suite) {
+          events.push({ name: 'suite', args: [serializeSuite(Suite)] })
+        })
 
-          return titles;
-        };
+        runner.on('suite end', function () {
+          events.push({ name: 'suite end', args: [] })
+        })
+
+        runner.on('pending', function (test) {
+          events.push({ name: 'pending', args: [serializeTest(test)] })
+        })
+
+        runner.on('pass', function (test) {
+          events.push({ name: 'pass', args: [serializeTest(test)] })
+        })
 
         runner.on('fail', function (test, err) {
-          failed.push({
-            name: test.title,
-            result: false,
-            message: err.message,
-            stack: err.stack,
-            titles: _flattenTitles(test)
-          });
-        });
+          events.push({ name: 'fail', args: [serializeTest(test), serializeErr(err)] })
+        })
 
         runner.on('end', function () {
-          window.mochaResults = runner.stats;
-          window.mochaResults.reports = failed;
-        });
+          events.push({ name: 'end', args: [] })
+          Promise.all(stacks).then(function () {
+            window.mochaResults = { stats: runner.stats, events: events }
+          })
+        })
+
+        var serializeSuite = function (Suite) {
+          return {
+            title: Suite.title
+          }
+        }
+
+        var serializeTest = function (test) {
+          return {
+            speed: test.speed,
+            duration: test.duration,
+            title: test.title,
+            fullTitle: test.fullTitle(),
+            _slow: test.slow()
+          }
+        }
+
+        var serializeErr = function (err) {
+          var formatted = {
+            name: err.name,
+            message: err.message
+          }
+
+          var stack = StackTrace.fromError(err).then(function (frames) {
+            formatted.stack = JSON.stringify(frames)
+          })
+
+          stacks.push(stack)
+          return formatted
+        }
+
+        mocha.suite.run()
       })();
     </script>
   </body>

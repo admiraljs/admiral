@@ -5,7 +5,9 @@
  * -------------------------------------------------------------------------- */
 
 // 3rd party
+const _ = require('lodash')
 const Promise = require('bluebird')
+const fakerr = require('fakerr')
 
 // lib
 const RunEnv = require('./run-env')
@@ -80,4 +82,19 @@ module.exports = class UnitRunner {
     })
   }
 
+  /* -----------------------------------------------------------------------------
+   * helpers
+   * -------------------------------------------------------------------------- */
+
+  deserializeError (errObj) {
+    const transformed = _.reduce(this.runEnv.transformations, (stack, transformation) => {
+      return stack.replace(new RegExp(transformation.to, 'g'), transformation.from)
+    }, errObj.stack)
+
+    return fakerr({
+      name: errObj.name,
+      message: errObj.message,
+      stack: JSON.parse(transformed)
+    })
+  }
 }
