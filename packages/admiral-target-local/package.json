@@ -20,16 +20,16 @@
   },
   "main": "lib/index.js",
   "dependencies": {
-    "bluebird": "^3.4.6",
-    "chromedriver": "^2.24.1",
-    "lodash": "^4.16.4",
-    "selenium-webdriver": "^3.0.0-beta-3"
+    "bluebird": "^3.4.7",
+    "chromedriver": "^2.27.1",
+    "lodash": "^4.17.4",
+    "selenium-webdriver": "^3.0.1"
   },
   "devDependencies": {
     "chai": "^3.5.0",
     "coveralls": "^2.11.15",
-    "inspect-process": "^0.4.0",
-    "mocha": "^3.1.2",
+    "inspect-process": "^0.4.1",
+    "mocha": "^3.2.0",
     "nyc": "^10.0.0",
     "standard": "^8.6.0"
   }
