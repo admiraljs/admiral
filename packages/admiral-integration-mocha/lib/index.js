@@ -38,8 +38,15 @@ Runner.prototype.runTest = function (test, browser) {
     let suite = this.suite
     while (suite.parent) { suite = suite.parent }
 
+    // Allow modifying how driver is returned. This allows for wrapping the
+    // driver in various contexts
+    suite.ctx.returnDriver = (browser) => browser.driver
+
     Object.defineProperty(suite.ctx, 'driver', {
-      get: function () { return browser.driver }
+      get: function () {
+        return browser.isOpen() && this._driver ||
+          (this._driver = this.returnDriver(browser))
+      }
     })
   }
 
