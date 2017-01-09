@@ -24,7 +24,7 @@ const Browser = module.exports = function (browserName) {
 }
 
 Browser.prototype.returnDriver = function () {
-  if (!this.isOpen() || this.wasQuit()) {
+  if (!this.isOpen()) {
     this._driver = this.build()
     this._session = this._driver.session_
   }
@@ -39,7 +39,7 @@ Browser.prototype.build = function () {
 }
 
 Browser.prototype.quit = function () {
-  return this.isOpen() && !this.wasQuit()
+  return this.isOpen()
     ? this._driver.quit()
     : Promise.resolve()
 }
@@ -49,6 +49,10 @@ Browser.prototype.quit = function () {
  * -------------------------------------------------------------------------- */
 
 Browser.prototype.isOpen = function () {
+  return this.hasOpened() && !this.wasQuit()
+}
+
+Browser.prototype.hasOpened = function () {
   return !!this._driver
 }
 
