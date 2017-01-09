@@ -15,28 +15,28 @@ const assert = require('chai').assert
 
 describe('Runner', function () {
   before(function () {
-    assert.equal(this.driver, 'test')
+    assert.ok(this.driver)
   })
 
   beforeEach(function () {
-    assert.equal(this.driver, 'test')
+    assert.ok(this.driver)
   })
 
   after(function () {
-    assert.equal(this.driver, 'test')
+    assert.ok(this.driver)
   })
 
   afterEach(function () {
-    assert.equal(this.driver, 'test')
+    assert.ok(this.driver)
   })
 
   it('Should set driver on ctx.', function () {
-    assert.equal(this.driver, 'test')
+    assert.ok(this.driver)
   })
 
   describe('nested', function () {
     it('Should set driver on ctx at all levels.', function () {
-      assert.equal(this.driver, 'test')
+      assert.ok(this.driver)
     })
   })
 })

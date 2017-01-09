@@ -14,6 +14,6 @@ const assert = require('chai').assert
 
 describe('Runner', function () {
   it('Should test multiple files.', function () {
-    assert.equal(this.driver, 'test')
+    assert.ok(this.driver)
   })
 })
