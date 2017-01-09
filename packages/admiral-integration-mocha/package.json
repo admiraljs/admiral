@@ -2,7 +2,7 @@
   "name": "admiral-integration-mocha",
   "description": "Admiral plugin to run integration tests with mocha.",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "homepage": "https://github.com/admiraljs/admiral-integration-mocha",
   "license": "MIT",
   "repository": {
