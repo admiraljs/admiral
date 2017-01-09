@@ -54,9 +54,7 @@ describe('Runner', function () {
           this.returnDriver = (browser) => fakeDriver
           assert.notEqual(this.driver, fakeDriver)
         })
-        .then(() => {
-          return this.driver.quit()
-        })
+        .then(() => this.driver.quit())
         .then(() => {
           // ensure returnDriver will be called when driver stale
           this.returnDriver = (browser) => fakeDriver

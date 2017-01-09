@@ -14,7 +14,7 @@
   },
   "scripts": {
     "test": "standard && node test/index.js",
-    "inspect-test": "inspect _mocha --no-timeouts",
+    "inspect-test": "inspect node test/index.js",
     "coverage": "nyc --reporter=lcov --reporter=text npm test",
     "coveralls": "cat ./coverage/lcov.info | coveralls"
   },
