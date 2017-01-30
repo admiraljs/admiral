@@ -38,6 +38,18 @@ Browser.prototype.build = function () {
     .build()
 }
 
+Browser.prototype.freeze = function () {
+  let keyPress = false
+  console.log('Press enter to continue...')
+
+  process.stdin.resume()
+  process.stdin.setEncoding('utf8')
+  process.stdin.on('data', __ => (keyPress = true))
+
+  return this.driver.wait(() => keyPress, Infinity)
+    .then(__ => process.stdin.pause())
+}
+
 Browser.prototype.quit = function () {
   return this.isOpen()
     ? this._driver.quit()

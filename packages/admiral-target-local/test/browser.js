@@ -53,4 +53,11 @@ describe('Browser', function () {
     return this.browser.driver.get('chrome://version')
       .then(() => assert.equal(this.browser.driver, ogDriver))
   })
+
+  it('Should freeze until stdin data processed.', function () {
+    setTimeout(__ => process.stdin.emit('data', '\n'), 5000)
+
+    return this.browser.driver.get('chrome://version')
+      .then(__ => this.browser.freeze())
+  })
 })
