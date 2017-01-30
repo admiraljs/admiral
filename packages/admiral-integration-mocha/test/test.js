@@ -37,6 +37,10 @@ describe('Runner', function () {
       assert.ok(this.driver)
     })
 
+    it('Should set freeze on ctx.', function () {
+      assert.isFunction(this.freeze)
+    })
+
     describe('nested', function () {
       it('Should set driver on ctx at all levels.', function () {
         assert.ok(this.driver)
