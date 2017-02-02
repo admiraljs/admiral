@@ -41,7 +41,13 @@ Runner.prototype.runTest = function (test, browser) {
     // Allow modifying how driver is returned. This allows for wrapping the
     // driver in various contexts
     suite.ctx.returnDriver = (browser) => browser.driver
-    suite.ctx.freeze = browser.freeze
+    suite.ctx.freeze = function () {
+      const originalTimeout = this.test._timeout
+      this.timeout(Infinity)
+
+      return browser.freeze()
+        .then(__ => this.timeout(originalTimeout))
+    }
 
     Object.defineProperty(suite.ctx, 'driver', {
       get: function () {

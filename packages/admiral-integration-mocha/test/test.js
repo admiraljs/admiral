@@ -38,7 +38,10 @@ describe('Runner', function () {
     })
 
     it('Should set freeze on ctx.', function () {
-      assert.isFunction(this.freeze)
+      this.timeout(1)
+      setTimeout(__ => process.stdin.emit('data', '\n'), 5)
+
+      return this.freeze()
     })
 
     describe('nested', function () {
