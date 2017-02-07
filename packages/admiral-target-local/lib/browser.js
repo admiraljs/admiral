@@ -52,7 +52,7 @@ Browser.prototype.freeze = function () {
 
 Browser.prototype.quit = function () {
   return this.isOpen()
-    ? this._driver.quit()
+    ? this._driver.then(__ => this._driver.quit())
     : Promise.resolve()
 }
 

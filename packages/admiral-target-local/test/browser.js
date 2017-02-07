@@ -38,6 +38,11 @@ describe('Browser', function () {
     return driver.get('chrome://version')
   })
 
+  it('Should wait for driver to resolve prior to quiting.', function () {
+    this.browser.driver
+    return this.browser.quit()
+  })
+
   it('Should create a new driver if previous driver was quit.', function () {
     const ogDriver = this.browser.driver
 
