@@ -1,4 +1,5 @@
 /* eslint-env mocha */
+/* global browser */
 'use strict'
 
 /* -----------------------------------------------------------------------------
@@ -16,57 +17,16 @@ const assert = require('chai').assert
 describe('Runner', function () {
   this.timeout(10000)
 
+  it('Should have browser available as global.', function () {
+    assert.ok(browser.driver)
+  })
+
   describe('contexts', function () {
-    before(function () {
-      assert.ok(this.driver)
-    })
-
-    beforeEach(function () {
-      assert.ok(this.driver)
-    })
-
-    after(function () {
-      assert.ok(this.driver)
-    })
-
-    afterEach(function () {
-      assert.ok(this.driver)
-    })
-
-    it('Should set driver on ctx.', function () {
-      assert.ok(this.driver)
-    })
-
-    it('Should set freeze on ctx.', function () {
+    it('Should adjust timeout for ctx on freeze.', function () {
       this.timeout(1)
       setTimeout(__ => process.stdin.emit('data', '\n'), 5)
 
-      return this.freeze()
-    })
-
-    describe('nested', function () {
-      it('Should set driver on ctx at all levels.', function () {
-        assert.ok(this.driver)
-      })
-    })
-  })
-
-  describe('modifications', function () {
-    it('Should expose a method to alter driver retrieval.', function () {
-      const fakeDriver = {}
-
-      return this.driver
-        .then(() => {
-          // fails to set if driver is open and set
-          this.returnDriver = (browser) => fakeDriver
-          assert.notEqual(this.driver, fakeDriver)
-        })
-        .then(() => this.driver.quit())
-        .then(() => {
-          // ensure returnDriver will be called when driver stale
-          this.returnDriver = (browser) => fakeDriver
-          assert.equal(this.driver, fakeDriver)
-        })
+      return browser.freeze()
     })
   })
 })

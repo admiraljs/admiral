@@ -33,29 +33,17 @@ Runner.prototype.run = function (test, browsers) {
 }
 
 Runner.prototype.runTest = function (test, browser) {
-  const attachDriver = function () {
-    // ensure we have root suite
-    let suite = this.suite
-    while (suite.parent) { suite = suite.parent }
+  let currentSuite
 
-    // Allow modifying how driver is returned. This allows for wrapping the
-    // driver in various contexts
-    suite.ctx.returnDriver = (browser) => browser.driver
-    suite.ctx.freeze = function () {
-      const originalTimeout = this.test._timeout
-      this.timeout(Infinity)
+  global.browser = browser
+  browser.freeze = _.wrap(browser.freeze.bind(browser), function (fn) {
+    const currentTest = currentSuite.test
+    const originalTimeout = currentTest._timeout
 
-      return browser.freeze()
-        .then(__ => this.timeout(originalTimeout))
-    }
-
-    Object.defineProperty(suite.ctx, 'driver', {
-      get: function () {
-        return browser.isOpen() && this._driver ||
-          (this._driver = this.returnDriver(browser))
-      }
-    })
-  }
+    return Promise.resolve(currentTest.ctx.timeout(Infinity))
+      .then(__ => fn())
+      .then(__ => currentTest.ctx.timeout(originalTimeout))
+  })
 
   return new Promise(function (resolve, reject) {
     const mocha = new Mocha().delay()
@@ -69,7 +57,7 @@ Runner.prototype.runTest = function (test, browser) {
       return browser.quit().then(resolve(failures))
     })
 
-    runner.on('start', attachDriver)
+    runner.on('test', function () { currentSuite = this })
     runner.suite.run()
   })
 }

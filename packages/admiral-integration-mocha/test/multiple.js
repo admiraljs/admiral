@@ -1,4 +1,5 @@
 /* eslint-env mocha */
+/* global browser */
 'use strict'
 
 /* -----------------------------------------------------------------------------
@@ -14,6 +15,6 @@ const assert = require('chai').assert
 
 describe('Runner', function () {
   it('Should test multiple files.', function () {
-    assert.ok(this.driver)
+    assert.ok(browser.driver)
   })
 })
