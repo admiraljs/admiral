@@ -1,11 +1,13 @@
-<h1 align="center">admiral</h1>
+<h1 align="center">admiral-unit-mocha</h1>
 <div align="center">
-  <p>Modular test runner for javascript land.</p>
+  <p>Admiral plugin to run unit tests with mocha.</p>
   <div>
-  <a href="https://travis-ci.org/admiraljs/admiral"><img src="https://travis-ci.org/admiraljs/admiral.svg?branch=master" alt="Build Status"></a>
-  <a href="https://codecov.io/gh/admiraljs/admiral"><img src="https://codecov.io/gh/admiraljs/admiral/branch/master/graph/badge.svg" alt="Codecov" />
-  </a>
-  <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  <a href="https://npmjs.org/package/admiral-unit-mocha"><img src="https://img.shields.io/npm/v/admiral-unit-mocha.svg" alt="NPM admiral-unit-mocha package"></a>
+  <a href="https://codecov.io/gh/admiraljs/admiral"><img src="https://codecov.io/gh/admiraljs/admiral/branch/master/graph/badge.svg?flag=admiral_unit_mocha" alt="Codecov" />
+  </div>
+  <div>
+  <a href="https://david-dm.org/admiraljs/admiral?path=packages/admiral-unit-mocha"><img src="https://david-dm.org/admiraljs/admiral.svg?path=packages/admiral-unit-mocha" alt="Dependency Status"></a>
+  <a href="https://david-dm.org/admiraljs/admiral?path=packages/admiral-unit-mocha#info=devDependencies"><img src="https://david-dm.org/admiraljs/admiral/dev-status.svg?path=packages/admiral-unit-mocha" alt="devDependency Status"></a>
   </div>
 </div>
 <br>

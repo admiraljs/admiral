@@ -1,41 +1,17 @@
 {
   "name": "admiral",
-  "description": "Modular test runner for javascript land.",
+  "description": "A modular test runner for javascript land.",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
-  "version": "0.0.4",
-  "homepage": "https://github.com/admiraljs/admiral",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/admiraljs/admiral"
-  },
-  "bugs": {
-    "url": "https://github.com/admiraljs/admiral/issues"
-  },
   "scripts": {
-    "test": "standard && mocha",
-    "inspect-test": "inspect _mocha --no-timeouts",
-    "coverage": "nyc --reporter=lcov --reporter=text npm test",
-    "coveralls": "cat ./coverage/lcov.info | coveralls"
-  },
-  "main": "lib/index.js",
-  "bin": {
-    "admiral": "lib/index.js"
-  },
-  "dependencies": {
-    "bluebird": "^3.4.6",
-    "glob": "^7.1.0",
-    "lodash": "^4.15.0",
-    "pawn": "^0.0.4"
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean",
+    "publish": "lerna publish",
+    "test": "lerna run test",
+    "coverage": "lerna run coverage",
+    "report-coverage": "./scripts/report-coverage.sh"
   },
   "devDependencies": {
-    "chai": "^4.0.2",
-    "coveralls": "^3.0.0",
-    "fs-extra": "^4.0.0",
-    "inspect-process": "^0.5.0",
-    "mocha": "^4.0.0",
-    "nyc": "^11.0.2",
-    "sinon": "^4.0.0",
-    "standard": "^10.0.0"
+    "lerna": "^2.5.1"
   }
 }

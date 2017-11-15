@@ -1,25 +1,11 @@
 .DS_Store
-.grunt
-
-lib-cov
-*.seed
-*.log
-*.csv
-*.dat
-*.out
-*.pid
-*.gz
-
-pids
-logs
-results
 
 npm-debug.log
-sauce_connect.log
+lerna-debug.log
 
-/.nyc_output
-/node_modules
-/bower_components
-/coverage
-/dist
-/docs
+/node_modules/
+packages/*/node_modules/
+
+coverage/
+.coverage/
+.nyc_output/
