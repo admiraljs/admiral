@@ -3,7 +3,7 @@
   "description": "Modular test runner for javascript land.",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
   "version": "0.0.4",
-  "homepage": "https://github.com/admiraljs/admiral",
+  "homepage": "https://github.com/admiraljs/admiral/tree/master/packages/admiral",
   "license": "MIT",
   "repository": {
     "type": "git",

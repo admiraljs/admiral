@@ -3,14 +3,14 @@
   "description": "Admiral plugin to run integration tests with mocha.",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
   "version": "0.3.0",
-  "homepage": "https://github.com/admiraljs/admiral-integration-mocha",
+  "homepage": "https://github.com/admiraljs/admiral/tree/master/packages/admiral-integration-mocha",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/admiraljs/admiral-integration-mocha"
+    "url": "https://github.com/admiraljs/admiral"
   },
   "bugs": {
-    "url": "https://github.com/admiraljs/admiral-integration-mocha/issues"
+    "url": "https://github.com/admiraljs/admiral/issues"
   },
   "scripts": {
     "test": "standard && node test/index.js",

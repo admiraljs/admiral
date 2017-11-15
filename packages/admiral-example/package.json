@@ -3,14 +3,14 @@
   "description": "Example of using admiral test runner.",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
   "version": "0.0.1",
-  "homepage": "https://github.com/admiraljs/admiral-example",
+  "homepage": "https://github.com/admiraljs/admiral/tree/master/packages/admiral-example",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/admiraljs/admiral-example"
+    "url": "https://github.com/admiraljs/admiral"
   },
   "bugs": {
-    "url": "https://github.com/admiraljs/admiral-example/issues"
+    "url": "https://github.com/admiraljs/admiral/issues"
   },
   "dependencies": {
     "admiral-integration-mocha": "^0.0.1",

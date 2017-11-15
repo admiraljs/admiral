@@ -3,14 +3,14 @@
   "description": "Admiral plugin to run tests via local selenium.",
   "author": "Jarid Margolin <jaridmargolin@gmail.com>",
   "version": "0.2.1",
-  "homepage": "https://github.com/admiraljs/admiral-target-local",
+  "homepage": "https://github.com/admiraljs/admiral/tree/master/packages/admiral-target-local",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/admiraljs/admiral-target-local"
+    "url": "https://github.com/admiraljs/admiral"
   },
   "bugs": {
-    "url": "https://github.com/admiraljs/admiral-target-local/issues"
+    "url": "https://github.com/admiraljs/admiral/issues"
   },
   "scripts": {
     "test": "standard && mocha",
