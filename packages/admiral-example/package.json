@@ -12,9 +12,6 @@
   "bugs": {
     "url": "https://github.com/admiraljs/admiral-example/issues"
   },
-  "scripts": {
-    "test": "admiral"
-  },
   "dependencies": {
     "admiral-integration-mocha": "^0.0.1",
     "admiral-target-local": "^0.0.1",
