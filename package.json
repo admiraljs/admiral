@@ -8,7 +8,8 @@
     "clean": "lerna clean",
     "publish": "lerna publish",
     "test": "lerna run test",
-    "coverage": "lerna run coverage"
+    "coverage": "lerna run coverage",
+    "report-coverage": "./scripts/report-coverage.sh"
   },
   "devDependencies": {
     "lerna": "^2.5.1"
