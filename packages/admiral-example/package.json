@@ -1,0 +1,30 @@
+{
+  "name": "admiral-example",
+  "description": "Example of using admiral test runner.",
+  "author": "Jarid Margolin <jaridmargolin@gmail.com>",
+  "version": "0.0.1",
+  "homepage": "https://github.com/admiraljs/admiral-example",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/admiraljs/admiral-example"
+  },
+  "bugs": {
+    "url": "https://github.com/admiraljs/admiral-example/issues"
+  },
+  "scripts": {
+    "test": "admiral"
+  },
+  "dependencies": {
+    "admiral-integration-mocha": "^0.0.1",
+    "admiral-target-local": "^0.0.1",
+    "admiral-unit-mocha": "^0.0.1",
+    "flvr": "^0.0.1",
+    "flvr-filter-chai": "^0.0.1",
+    "flvr-filter-mocha": "^0.0.1",
+    "pawn": "^0.0.2"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0"
+  }
+}
