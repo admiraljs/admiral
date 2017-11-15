@@ -6,7 +6,9 @@
   "scripts": {
     "bootstrap": "lerna bootstrap",
     "clean": "lerna clean",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "test": "lerna run test",
+    "coverage": "lerna run coverage"
   },
   "devDependencies": {
     "lerna": "^2.5.1"
