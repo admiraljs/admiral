@@ -2,21 +2,20 @@
 <div align="center">
   <p>Admiral plugin to run tests via local selenium.</p>
   <div>
-  <a href="https://travis-ci.org/admiraljs/admiral-target-local"><img src="https://travis-ci.org/admiraljs/admiral-target-local.svg?branch=master" alt="Build Status"></a>
-  <a href="https://coveralls.io/github/admiraljs/admiral-target-local?branch=master"><img src="https://coveralls.io/repos/github/admiraljs/admiral-target-local/badge.svg?branch=master" alt="Coverage Status"></a>
-  <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  <a href="https://npmjs.org/package/admiral-target-local"><img src="https://img.shields.io/npm/v/admiral-target-local.svg" alt="NPM admiral-target-local package"></a>
+  <a href="https://codecov.io/gh/admiraljs/admiral"><img src="https://codecov.io/gh/admiraljs/admiral/branch/master/graph/badge.svg?flag=admiral_target_local" alt="Codecov" />
   </div>
   <div>
-  <a href="https://npmjs.org/package/admiral-target-local"><img src="https://img.shields.io/npm/v/admiral-target-local.svg" alt="NPM admiral-target-local package"></a>
-  <a href="https://david-dm.org/admiraljs/admiral-target-local"><img src="https://david-dm.org/admiraljs/admiral-target-local.svg" alt="Dependency Status"></a>
-  <a href="https://david-dm.org/admiraljs/admiral-target-local#info=devDependencies"><img src="https://david-dm.org/admiraljs/admiral-target-local/dev-status.svg" alt="devDependency Status"></a>
+  <a href="https://david-dm.org/admiraljs/admiral?path=packages/admiral-target-local"><img src="https://david-dm.org/admiraljs/admiral.svg?path=packages/admiral-target-local" alt="Dependency Status"></a>
+  <a href="https://david-dm.org/admiraljs/admiral?path=packages/admiral-target-local#info=devDependencies"><img src="https://david-dm.org/admiraljs/admiral/dev-status.svg?path=packages/admiral-target-local" alt="devDependency Status"></a>
   </div>
 </div>
 <br>
 
+
 ## License
 
-The MIT License (MIT) Copyright (c) 2016 Jarid Margolin
+The MIT License (MIT) Copyright (c) 2017 Jarid Margolin
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 

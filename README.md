@@ -1,6 +1,15 @@
-# admiral
+<h1 align="center">admiral</h1>
+<div align="center">
+  <p>Modular test runner for javascript land.</p>
+  <div>
+  <a href="https://travis-ci.org/admiraljs/admiral"><img src="https://travis-ci.org/admiraljs/admiral.svg?branch=master" alt="Build Status"></a>
+  <a href="https://codecov.io/gh/admiraljs/admiral"><img src="https://codecov.io/gh/admiraljs/admiral/branch/master/graph/badge.svg" alt="Codecov" />
+  </a>
+  <a href="http://standardjs.com/"><img src="https://img.shields.io/badge/code%20style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  </div>
+</div>
+<br>
 
-A modular test runner for javascript land.
 
 ## License
 
