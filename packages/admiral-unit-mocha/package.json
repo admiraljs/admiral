@@ -33,7 +33,7 @@
   },
   "devDependencies": {
     "admiral-target-local": "0.1.0",
-    "chai": "3.5.0",
+    "chai": "4.1.2",
     "mocha": "3.5.3",
     "nyc": "10.3.2",
     "standard": "8.6.0",
