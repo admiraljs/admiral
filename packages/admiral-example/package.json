@@ -17,7 +17,7 @@
     "admiral-target-local": "^0.0.1",
     "admiral-unit-mocha": "^0.0.1",
     "flvr": "0.1.5",
-    "flvr-filter-chai": "0.0.1",
+    "flvr-filter-chai": "0.0.2",
     "flvr-filter-mocha": "0.0.2",
     "pawn": "0.0.2"
   },
