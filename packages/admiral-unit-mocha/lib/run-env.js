@@ -21,7 +21,6 @@ const Mustache = require('mustache')
  * -------------------------------------------------------------------------- */
 
 module.exports = class RunEnv {
-
   build (testFiles) {
     const stacktraceFiles = this.getStacktraceFiles()
     const mochaFiles = this.getMochaFiles()
@@ -81,5 +80,4 @@ module.exports = class RunEnv {
   destroy () {
     rimraf.sync(this.rootPath)
   }
-
 }
