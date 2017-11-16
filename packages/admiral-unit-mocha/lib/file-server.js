@@ -17,7 +17,6 @@ const nodeStatic = require('node-static')
  * -------------------------------------------------------------------------- */
 
 module.exports = class FileServer {
-
   start (rootPath) {
     return this.findPort()
       .then((port) => this.serve(rootPath, port))
@@ -26,7 +25,7 @@ module.exports = class FileServer {
 
   findPort () {
     return new Promise((resolve, reject) => {
-      portfinder.getPort((err, port) => err ? reject() : resolve(port))
+      portfinder.getPort((err, port) => err ? reject(err) : resolve(port))
     })
   }
 
@@ -37,16 +36,15 @@ module.exports = class FileServer {
         req.addListener('end', () => this.staticServer.serve(req, res)).resume()
       })
 
-      this.server.listen(port, (err) => err ? reject() : resolve(this.server))
+      this.server.listen(port, (err) => err ? reject(err) : resolve(this.server))
     })
   }
 
   stop () {
     return new Promise((resolve, reject) => {
       return this.server
-        ? this.server.close((err) => err ? reject() : resolve())
+        ? this.server.close((err) => err ? reject(err) : resolve())
         : resolve()
     })
   }
-
 }

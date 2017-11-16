@@ -18,7 +18,6 @@ const UnitRunner = require('./unit-runner')
  * -------------------------------------------------------------------------- */
 
 module.exports = class UnitMochaRunner extends UnitRunner {
-
   static get options () {
     return {
       'unitMocha.target': {
@@ -81,5 +80,4 @@ module.exports = class UnitMochaRunner extends UnitRunner {
     _.set(event, 'args[0].fullTitle', () => fullTitle)
     return _.set(event, 'args[1]', err)
   }
-
 }

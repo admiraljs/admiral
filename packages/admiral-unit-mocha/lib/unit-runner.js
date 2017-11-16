@@ -18,7 +18,6 @@ const FileServer = require('./file-server')
  * -------------------------------------------------------------------------- */
 
 module.exports = class UnitRunner {
-
   // OVERWRITE with runner specific options
   static get options () {
     return {}
