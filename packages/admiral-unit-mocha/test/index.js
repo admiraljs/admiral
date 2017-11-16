@@ -38,12 +38,16 @@ describe('UnitMochaRunner', function () {
       assert.include(output, 'Should run tests in multiple files.')
       assert.include(output, '2 passing')
       assert.include(output, '1 failing')
-      assert.include(output, '1) Runner Should report failures.')
+      assert.include(output, '1) Runner')
+      assert.include(output, 'Should report failures.:')
       assert.include(output, 'Error: test')
       assert.include(output, 'Context.<anonymous>')
       assert.include(output, 'test.js:14:11')
 
       stdoutSpy.restore()
+    }).catch((e) => {
+      stdoutSpy.restore()
+      throw e
     })
   })
 })

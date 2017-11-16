@@ -76,8 +76,10 @@ module.exports = class UnitMochaRunner extends UnitRunner {
   _deserializeFailEvent (event) {
     const err = this.deserializeError(event.args[1])
     const fullTitle = event.args[0].fullTitle
+    const titlePath = event.args[0].titlePath
 
     _.set(event, 'args[0].fullTitle', () => fullTitle)
+    _.set(event, 'args[0].titlePath', () => titlePath)
     return _.set(event, 'args[1]', err)
   }
 }
