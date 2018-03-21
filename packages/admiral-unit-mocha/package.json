@@ -36,7 +36,7 @@
     "chai": "4.1.2",
     "mocha": "4.1.0",
     "nyc": "11.4.1",
-    "standard": "11.0.0",
+    "standard": "11.0.1",
     "strip-ansi": "4.0.0",
     "test-console": "1.1.0"
   }
