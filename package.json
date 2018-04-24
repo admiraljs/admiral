@@ -12,6 +12,6 @@
     "report-coverage": "./scripts/report-coverage.sh"
   },
   "devDependencies": {
-    "lerna": "2.7.0"
+    "lerna": "2.11.0"
   }
 }
