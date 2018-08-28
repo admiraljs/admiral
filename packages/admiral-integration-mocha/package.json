@@ -27,7 +27,7 @@
     "admiral-target-local": "^0.2.0",
     "chai": "4.1.2",
     "mocha": "4.1.0",
-    "nyc": "12.0.2",
+    "nyc": "13.0.1",
     "standard": "11.0.1"
   }
 }
