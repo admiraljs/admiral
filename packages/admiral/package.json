@@ -28,7 +28,7 @@
     "pawn": "^0.0.4"
   },
   "devDependencies": {
-    "chai": "4.1.2",
+    "chai": "4.2.0",
     "fs-extra": "7.0.0",
     "mocha": "5.2.0",
     "nyc": "13.0.1",
