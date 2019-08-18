@@ -28,7 +28,7 @@
     "node-static": "^0.7.9",
     "node-uuid": "^1.4.7",
     "portfinder": "^1.0.10",
-    "rimraf": "^2.5.4",
+    "rimraf": "^3.0.0",
     "stacktrace-js": "^2.0.0"
   },
   "devDependencies": {
