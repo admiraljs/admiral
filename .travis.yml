@@ -9,7 +9,7 @@ addons:
 
 language: node_js
 node_js:
-- 6.5.0
+- 6.17.1
 
 before_script:
   - npm run bootstrap
